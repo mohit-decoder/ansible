@@ -1,6 +1,6 @@
 - name: this is yaml file
   hosts: all
   tasks:
-    name: Abhay-Marwade
-    debug:
-      msg: Congrats..!!! You are Selected
+   - name: Abhay-Marwade
+     debug:
+       msg: Congrats..!!! You are Selected
