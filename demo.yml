@@ -1,5 +1,6 @@
 - name: this is yaml file
   hosts: all
+  become: yes 
   tasks:
    - name: Abhay-Marwade
      debug:
