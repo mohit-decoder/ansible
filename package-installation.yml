@@ -1,0 +1,9 @@
+- name: Packaging installation using playbook
+  hosts: all
+  become: yes
+  tasks: 
+    - name: httpd installtion
+      ansible.builtin.package:
+      state: present
+    - name: service restart
+      shell: systemctl restart httpd
