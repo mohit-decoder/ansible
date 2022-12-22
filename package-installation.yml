@@ -2,9 +2,9 @@
   hosts: all
   become: yes
   tasks: 
-    - name: httpdinstalltion
-      ansible.builtin.package:
-        name: httpd
-        state: present
-    - name: servicerestart
-      shell: systemctl restart httpd
+  - name: Install the latest version of Apache and MariaDB
+    ansible.builtin.package:
+      name:
+        - httpd
+        - mariadb-server
+      state: latest
