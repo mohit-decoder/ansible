@@ -4,7 +4,9 @@
   tasks:
   - name: package installation
     ansible.builtin.package:
-      name: apache2
+      name: 
+      - apache2
+      - unzip
       state: present
     
   - name: download template
