@@ -4,6 +4,6 @@
   tasks: 
     - name: fileisbeingcopy
       copy:
-        src: /home/ubuntu/copy.txt
+        src: /home/ubuntu/abhay
         dest: /opt/
         remote_src: yes
