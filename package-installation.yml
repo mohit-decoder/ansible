@@ -4,6 +4,7 @@
   tasks: 
   - name: httpdinstalltion
     ansible.builtin.package:
-    state: present
+      name: httpd-package
+      state: present
   - name: servicerestart
-    shell: systemctl restart httpd
+      shell: systemctl restart httpd
