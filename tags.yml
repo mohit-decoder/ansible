@@ -3,9 +3,9 @@
   tasks: 
     - name: task for webserver
       debug: 
-        msg: marwade got fucked last night
+        msg: this is the webserver maintained by mohit 
       tags: webserver
     - name: tasks for database-server
       debug: 
-        msg: abhay now varified customer of GJ-Nago
+        msg: this is database-server maintained by abhay
       tags: database-server
