@@ -11,13 +11,13 @@
     
   - name: download template
     ansible.builtin.get_url:
-      url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
+      url: https://www.free-css.com/assets/files/free-css-templates/download/page281/ogistic.zip
       dest: /home/ubuntu/
       remote_src: true
     
   - name: unzip
     ansible.builtin.unarchive:
-      src: /home/ubuntu/creative-studio.zip
+      src: /home/ubuntu/ogistic.zip
       dest: /usr/share/nginx/html/
       remote_src: true
 
