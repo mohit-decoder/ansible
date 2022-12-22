@@ -2,8 +2,8 @@
   hosts: all
   become: yes
   tasks: 
-  - name: fileisbeingcopy
-    copy:
-    remote_src: yes
-    src: /home/ubuntu/copy.txt
-    dest: /opt/
+    - name: fileisbeingcopy
+      copy:
+        remote_src: yes
+        src: /home/ubuntu/copy.txt
+        dest: /opt/
