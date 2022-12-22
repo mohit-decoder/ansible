@@ -1,2 +1,22 @@
 - name: temp hosting playbook
-  hosts: 
+  hosts: all
+  become: yes
+  tasks:
+    - name: package installation
+      ansible.builtin.package:
+      name: apache2
+      state: present
+    
+    - name: download template
+      ansible.get.url:
+        url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
+        dest: /home/ubuntu/
+    
+    - name: unzip
+      ansible.builtin.unarchieve:
+        src: /home/ubuntu/
+        dest: /var/www/html/
+
+    - name: restart
+      shell: systemctl restart apache2    
+      
