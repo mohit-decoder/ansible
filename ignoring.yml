@@ -1,8 +1,8 @@
 - name: ignoring errors
   hosts: all
-  - name: ignore-error
-      shell: ps_aux | grep java | grep -v java
-      ignore_error: yes
+  - name: ignoreerror
+    shell: ps_aux | grep java | grep -v java
+    ignore_errors: yes
   - name: run the process
     debug:
       msg: ignoring the process
