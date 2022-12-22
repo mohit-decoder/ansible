@@ -3,7 +3,7 @@
   become: yes
   tasks: 
     - name: fileisbeingcopy
-      ansible.builtin.copy:
-        src: /home/ubuntu/abhay
+      copy:
+        src: /abhay
         dest: /opt/
         remote_src: yes
