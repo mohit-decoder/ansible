@@ -3,17 +3,15 @@
   become: yes
   vars:
     URL: www.globalvars.com
-  tasks:
-    - name: variableplaybook 
-      debug:
-        msg: Priority of vars is for"{{URL}}"
-      vars: 
-        URL: www.localvars.com 
-  
-  
-  # tasks: 
-  #   vars_files:
-  #     file-vars.yml  
-  #   - name: filevariable
-  #      debug: 
-  #        msg: Priority of vars is for "{{url}}"
+  # tasks:
+  #   - name: variableplaybook 
+  #     debug:
+  #       msg: Priority of vars is for"{{URL}}"
+  #     vars: 
+  #       URL: www.localvars.com 
+    tasks: 
+      vars_files:
+      file-vars.yml  
+      - name: filevariable
+        debug: 
+          msg: Priority of vars is for "{{url}}"
