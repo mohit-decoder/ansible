@@ -1,0 +1,16 @@
+- name: Company
+  hosts: all
+  become: yes
+  #vars:
+          #url: redmi.com
+   #vars_files:
+   #     - file-var.yml 
+   #vars_prompt: 
+   # - name: url
+   #  prompt: "pankaj kya kr rha hai"
+  tasks:
+    - name: website to host
+      debug:
+        msg: this is the smartphone available on {{url}}
+        #vars: 
+        #url: mi.com

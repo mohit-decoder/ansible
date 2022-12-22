@@ -1,0 +1,17 @@
+- name: playbook
+  hosts: all
+  become: yes
+  gather_facts: yes
+  vars_files:
+     - file_vars.yml
+ 
+  tasks:
+     - name: website name
+       debug:
+         msg: new {{ url }}
+       vars:
+               url: local.yahho.com   
+
+     - name: website name
+       debug:
+         msg: new {{ url }}      

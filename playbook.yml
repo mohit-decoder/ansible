@@ -1,0 +1,10 @@
+- name: var_playbook
+  hosts: all
+  vars: 
+   URL: global.google.com
+  # vars_files:
+  #   - file_vars.yml
+  tasks:
+    - name: var
+      debug: 
+        msg: The global URl is {{URL}}

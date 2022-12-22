@@ -1,0 +1,14 @@
+- name: Company
+  hosts: all
+  become: yes
+
+  vars:
+        url: redmi.com
+  tasks:
+        - name: website to host
+          debug:
+                  msg: this is the smartphone available on {{url}}
+
+
+
+
