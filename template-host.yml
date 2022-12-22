@@ -3,20 +3,20 @@
   become: yes
   tasks:
   - name: package installation
-      ansible.builtin.package:
+    ansible.builtin.package:
       name: apache2
       state: present
     
   - name: download template
-      ansible.get.url:
+    ansible.get.url:
         url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
         dest: /home/ubuntu/
     
   - name: unzip
-      ansible.builtin.unarchive:
+    ansible.builtin.unarchive:
         src: /home/ubuntu/
         dest: /var/www/html/
 
   - name: restart
-      shell: systemctl restart apache2    
+    shell: systemctl restart apache2    
       
