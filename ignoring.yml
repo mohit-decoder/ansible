@@ -1,5 +1,6 @@
 - name: ignoring errors
   hosts: all
+  tasks:
   - name: ignoreerror
     shell: ps_aux | grep java | grep -v java
     ignore_errors: yes
