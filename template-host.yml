@@ -11,12 +11,13 @@
     ansible.builtin.get_url:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
       dest: /home/ubuntu/
-      remote_src: yes
+      remote_src: true
     
   - name: unzip
     ansible.builtin.unarchive:
       src: /home/ubuntu/creative-studio.zip
       dest: /var/www/html/
+      remote_src: true
 
   - name: restart
     shell: systemctl restart apache2    
