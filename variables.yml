@@ -4,11 +4,11 @@
   vars:
     URL: www.globalvars.com
   tasks:
-    - name: variableplaybook
-      debug:
-        msg: Priority of vars is for "{{URL}}"
+      - name: variableplaybook
+        debug:
+          msg: Priority of vars is for"{{URL}}"
     vars: 
       URL: www.localvars.com 
       - name: local variables
         debug:
-          msg: Priority of vars is for "{{URL}}"
+          msg: Priority of vars is for"{{URL}}"
