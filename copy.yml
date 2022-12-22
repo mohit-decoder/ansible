@@ -3,7 +3,8 @@
   become: yes
   tasks: 
     - name: fileisbeingcopy
+      become: yes
       copy:
         remote_src: yes
         src: /home/ubuntu/copy.txt
-        dest: /opt/
+        dest: /opt/copy11.txt
