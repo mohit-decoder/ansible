@@ -8,4 +8,4 @@
     - name: tasks for database-server
       debug: 
         msg: abhay now varified customer of GJ-Nago
-      tags: databse-server
+      tags: database-server
