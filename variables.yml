@@ -1,0 +1,15 @@
+- name : Variable Playbook
+  hosts: all
+  vars:
+    URL: www.globalvars.com
+  tasks:
+    - name: variableplaybook
+      debug:
+        msg: Priority of vars is for "{{URL}}"
+
+    vars: 
+      URL: www.localvars.com 
+      - name: local variables
+        debug:
+          msg: Priority of vars is for "{{URL}}"
+          
