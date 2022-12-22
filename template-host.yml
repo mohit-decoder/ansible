@@ -14,7 +14,7 @@
     
   - name: unzip
     ansible.builtin.unarchive:
-      src: /home/ubuntu/creative-studio
+      src: /home/ubuntu/creative-studio.zip
       dest: /var/www/html/
 
   - name: restart
