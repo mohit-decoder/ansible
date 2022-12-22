@@ -12,6 +12,6 @@
     tasks: 
       vars_files:
       file-vars.yml  
-      - name: filevariable
-        debug: 
-          msg: Priority of vars is for "{{url}}"
+        - name: filevariable
+          debug: 
+            msg: Priority of vars is for "{{url}}"
