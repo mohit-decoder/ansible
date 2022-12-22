@@ -11,6 +11,7 @@
     ansible.builtin.get_url:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
       dest: /home/ubuntu/
+      remote_src: yes
     
   - name: unzip
     ansible.builtin.unarchive:
