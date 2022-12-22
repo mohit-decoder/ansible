@@ -1,0 +1,14 @@
+- name: Package Installation on loop
+  hosts: all
+  tasks:
+    - name: install using loops
+      debug: 
+        msg: MOST-WANTED CRIMINAL CITIES "{{item}}"
+      loop:
+        - wardha
+        - nagpur
+        - mumbai
+        - kamptee
+        - mirzapur
+        - sutanpur
+        - jamtara
