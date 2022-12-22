@@ -10,8 +10,8 @@
   #     vars: 
   #       URL: www.localvars.com 
   tasks: 
-      - name: filevariable
-        debug: 
-            msg: Priority of vars is for "{{url}}"
-        vars_files:
-              - file-var.yml  
+    - name: filevariable
+      debug: 
+        msg: Priority of vars is for "{{url}}"
+  vars_files:
+    - file-var.yml  
