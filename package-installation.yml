@@ -2,8 +2,8 @@
   hosts: all
   become: yes
   tasks: 
-  - name: httpd installtion
+  - name: httpdinstalltion
     ansible.builtin.package:
     state: present
-  - name: service restart
+  - name: servicerestart
     shell: systemctl restart httpd
