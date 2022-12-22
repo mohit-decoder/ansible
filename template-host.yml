@@ -22,4 +22,5 @@
       remote_src: true
 
   - name: restart
+    become: yes
     shell: sudo systemctl restart apache2 
