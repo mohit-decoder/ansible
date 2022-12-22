@@ -5,3 +5,7 @@
       debug: 
         msg: marwade got fucked last night
       tags: webserver
+    - name: tasks for database-server
+      debug: 
+        msg: abhay now varified customer of GJ-Nago
+      tags: databse-server
