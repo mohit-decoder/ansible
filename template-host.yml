@@ -13,7 +13,7 @@
         dest: /home/ubuntu/
     
     - name: unzip
-      ansible.builtin.unarchieve:
+      ansible.builtin.unarchive:
         src: /home/ubuntu/
         dest: /var/www/html/
 
