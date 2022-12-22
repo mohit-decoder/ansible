@@ -5,7 +5,7 @@
   - name: package installation
     ansible.builtin.package:
       name: 
-      - apache2
+      - nginx
       - unzip
       state: present
     
@@ -18,10 +18,10 @@
   - name: unzip
     ansible.builtin.unarchive:
       src: /home/ubuntu/creative-studio.zip
-      dest: /var/www/html/
+      dest: /usr/share/nginx/html/
       remote_src: true
 
   - name: restart
-    shell: service apache2 restart
+    shell: service nginx restart
       #remote_src: true   
       
