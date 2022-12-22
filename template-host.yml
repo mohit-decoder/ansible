@@ -2,21 +2,21 @@
   hosts: all
   become: yes
   tasks:
-    - name: package installation
+  - name: package installation
       ansible.builtin.package:
       name: apache2
       state: present
     
-    - name: download template
+  - name: download template
       ansible.get.url:
         url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
         dest: /home/ubuntu/
     
-    - name: unzip
+  - name: unzip
       ansible.builtin.unarchive:
         src: /home/ubuntu/
         dest: /var/www/html/
 
-    - name: restart
+  - name: restart
       shell: systemctl restart apache2    
       
