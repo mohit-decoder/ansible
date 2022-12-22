@@ -5,7 +5,7 @@
     URL: www.globalvars.com
   tasks:
     - name: variableplaybook
-      vars: 
+    vars: 
         URL: www.localvars.com 
         debug:
           msg: Priority of vars is for"{{URL}}"
