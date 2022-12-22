@@ -5,6 +5,6 @@
   - name: Install the latest version of Apache and MariaDB
     ansible.builtin.package:
       name:
-        - httpd
-        - mariadb-server
+        - apache2
+        - tree
       state: latest
