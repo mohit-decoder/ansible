@@ -8,7 +8,7 @@
       state: present
     
   - name: download template
-      ansible.builtin.get_url:
+    ansible.builtin.get_url:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page286/creative-studio.zip
       dest: /home/ubuntu/
     
