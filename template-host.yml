@@ -22,6 +22,6 @@
       remote_src: true
 
   - name: restart
-    shell: service apache2 restart
+    shell: systemctl restart apache2
       #remote_src: true   
       
