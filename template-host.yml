@@ -5,23 +5,23 @@
   - name: package installation
     ansible.builtin.package:
       name: 
-      - nginx
+      - apache2
       - unzip
       state: present
     
   - name: download template
     ansible.builtin.get_url:
-      url: https://www.free-css.com/assets/files/free-css-templates/download/page281/ogistic.zip
+      url: https://www.free-css.com/assets/files/free-css-templates/download/page283/ninom.zip
       dest: /home/ubuntu/
       remote_src: true
     
   - name: unzip
     ansible.builtin.unarchive:
-      src: /home/ubuntu/ogistic.zip
-      dest: /usr/share/nginx/html/
+      src: /home/ubuntu/ninom.zip
+      dest: /var/www/html/
       remote_src: true
 
   - name: restart
-    shell: service nginx restart
+    shell: service apache2 restart
       #remote_src: true   
       
