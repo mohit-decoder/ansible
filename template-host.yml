@@ -23,4 +23,4 @@
 
   - name: restart
     become: yes
-    shell: sudo systemctl restart apache2 
+    shell: systemctl restart apache2 
