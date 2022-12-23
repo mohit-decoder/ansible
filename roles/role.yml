@@ -1,6 +1,6 @@
 - name: Playbook for host-server
   hosts: all
   become: yes
-  tasks:
+  roles:
     - webserver
     #- appserver
