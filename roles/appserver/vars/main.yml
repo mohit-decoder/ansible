@@ -1,0 +1,6 @@
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.zip
+package: openjdk-11-jre
+tomcat-file_src: /opt/apache-tomcat-9.0.70.zip
+tomcat-file_dest: /home/ubuntu/
+tomcat-student.war: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
+tomcat-student.war-dest: /home/ubuntu/apache-tomcat-9.0.70/webapps
