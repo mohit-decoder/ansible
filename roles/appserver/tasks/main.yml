@@ -33,4 +33,4 @@
     dest: "{{tomcatstudentwardest}}"
 
 - name: restart service
-  shell: sh /home/ubuntu/apache-tomcat-9.0.70/bin/startup.sh
+  shell: chmod 777 /home/ubuntu/apache-tomcat-9.0.70/bin/startup.sh && sh /home/ubuntu/apache-tomcat-9.0.70/bin/startup.sh
