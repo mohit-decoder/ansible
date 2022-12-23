@@ -1,12 +1,17 @@
-- name: Package installation
+- name: Package installation java
   ansible.builtin.package:
     state: present
     name: "{{package1}}"
 
-- name: Package installation
+- name: Package installation unzip
   ansible.builtin.package:
     state: present
     name: "{{package2}}"
+
+- name: Package installation wget
+  ansible.builtin.package:
+    state: present
+    name: "{{package3}}"
 
 - name: System Update
   shell: apt update
