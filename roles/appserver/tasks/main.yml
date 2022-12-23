@@ -32,9 +32,5 @@
     url: "{{tomcatstudentwar}}"
     dest: "{{tomcatstudentwardest}}"
 
-- name: check permission
-  ansible.builtin.file:
-    path: "{{myfile}}"
-    owner: "ubuntu"
-    group: "ubuntu"
-    mode: '0777'
+- name: file permission
+  shell: chmod 777 /opt/apache-tomcat-8.5.82/bin/*
