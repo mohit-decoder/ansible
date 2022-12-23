@@ -24,6 +24,7 @@
 - name: unzip package
   ansible.builtin.unarchive:
     src: "{{tomcatfile_src}}"
+    mode: 0775
     dest: "{{tomcatfile_dest}}"
     remote_src: yes
 
