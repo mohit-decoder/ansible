@@ -1,13 +1,13 @@
 - name: Package installation
   ansible.builtin.package:
     state: present
-    name: httpd
+    name: apache2
 
 - name: Download Package
   ansible.builtin.get_url:
     url: "{{url}}"
     dest: /opt
-    
+
 - name: unzip package
   ansible.builtin.unarchive:
     src: "{{file_src}}"
