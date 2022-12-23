@@ -34,7 +34,7 @@
 
 - name: check permission
   ansible.builtin.file:
-    state: present
+    state: file
     path: "{{myfile}}"
     owner: "ubuntu"
     group: "ubuntu"
