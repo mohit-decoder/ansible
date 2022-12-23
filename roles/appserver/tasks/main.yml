@@ -33,15 +33,5 @@
     url: "{{tomcatstudentwar}}"
     dest: "{{tomcatstudentwardest}}"
 
-# - name: check permission
-#   ansible.builtin.file:
-#     path: "{{ myfile }}"
-#     owner: "ubuntu"
-#     group: "ubuntu"
-#     mode: '0777'
-
-# - name: file permission
-#   shell: sudo chmod 777 /opt/apache-tomcat-9.0.70/bin/catalina.sh
-
 - name: service start
   shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
