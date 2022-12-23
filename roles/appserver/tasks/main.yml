@@ -24,8 +24,8 @@
 - name: unzip package
   ansible.builtin.unarchive:
     src: "{{tomcatfile_src}}"
-    mode: 0775
     dest: "{{tomcatfile_dest}}"
+    mode: 0775
     remote_src: yes
 
 - name: Download Artifact
@@ -40,8 +40,8 @@
 #     group: "ubuntu"
 #     mode: '0777'
 
-- name: file permission
-  shell: sudo chmod 777 /opt/apache-tomcat-9.0.70/bin/catalina.sh
+# - name: file permission
+#   shell: sudo chmod 777 /opt/apache-tomcat-9.0.70/bin/catalina.sh
 
-- name: service start
-  shell: sh /opt/apache-tomcat-9.0.70/bin/catalina.sh start
+# - name: service start
+#   shell: sh /opt/apache-tomcat-9.0.70/bin/catalina.sh start
