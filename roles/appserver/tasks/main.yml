@@ -44,4 +44,4 @@
 #   shell: sudo chmod 777 /opt/apache-tomcat-9.0.70/bin/catalina.sh
 
 - name: service start
-  shell: /opt/apache-tomcat-9.0.70/bin/catalina.sh start
+  shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
