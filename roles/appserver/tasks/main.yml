@@ -32,5 +32,9 @@
     url: "{{tomcatstudentwar}}"
     dest: "{{tomcatstudentwardest}}"
 
-- name: restart service
-  shell: chmod 777 /home/ubuntu/apache-tomcat-9.0.70/bin/startup.sh ; sh /home/ubuntu/apache-tomcat-9.0.70/bin/startup.sh
+- name: check permission
+      ansible.builtin.file:
+        path: "{{myfile}}"
+        owner: "ubuntu"
+        group: "ubuntu"
+        mode: '0777'
