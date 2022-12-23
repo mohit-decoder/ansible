@@ -4,5 +4,5 @@ package2: unzip
 package3: wget
 tomcatfile_src: /opt/apache-tomcat-9.0.70.zip
 tomcatfile_dest: /home/ubuntu/
-tomcatstudent.war: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
-tomcatstudent.war_dest: /home/ubuntu/apache-tomcat-9.0.70/webapps
+tomcatstudentwar: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
+tomcatstudentwardest: /home/ubuntu/apache-tomcat-9.0.70/webapps
