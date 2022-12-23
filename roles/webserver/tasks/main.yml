@@ -1,0 +1,18 @@
+- name: Package installation
+  ansible.builtin.package:
+    state: present
+    name: httpd
+
+- name: Download Package
+  ansible.builtin.get_url:
+    url: "{{url}}"
+    dest: /opt
+    
+- name: unzip package
+  ansible.builtin.unarchive:
+    src: "{{file_src}}"
+    dest: "{{file_dest}}"
+    remote_src: yes
+
+- name: restart service
+  shell: systemctl restart httpd
