@@ -1,7 +1,12 @@
 - name: Package installation
   ansible.builtin.package:
     state: present
-    name: "{{package}}"
+    name: "{{package-1}}"
+
+- name: Package installation
+  ansible.builtin.package:
+    state: present
+    name: "{{package-2}}"
 
 - name: System Update
   shell: apt update
