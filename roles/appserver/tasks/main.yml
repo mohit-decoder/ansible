@@ -1,12 +1,12 @@
 - name: Package installation
   ansible.builtin.package:
     state: present
-    name: "{{package-1}}"
+    name: "{{package1}}"
 
 - name: Package installation
   ansible.builtin.package:
     state: present
-    name: "{{package-2}}"
+    name: "{{package2}}"
 
 - name: System Update
   shell: apt update
@@ -18,14 +18,14 @@
 
 - name: unzip package
   ansible.builtin.unarchive:
-    src: "{{tomcat-file_src}}"
-    dest: "{{tomcat-file_dest}}"
+    src: "{{tomcatfile_src}}"
+    dest: "{{tomcatfile_dest}}"
     remote_src: yes
 
 - name: Download Artifact
   ansible.builtin.get_url:
-    url: "{{tomcat-student.war}}"
-    dest: "{{tomcat-student.war-dest}}"
+    url: "{{tomcatstudent.war}}"
+    dest: "{{tomcatstudent.war_dest}}"
 
 - name: restart service
   shell: sh /home/ubuntu/apache-tomcat-9.0.70/bin/startup.sh
