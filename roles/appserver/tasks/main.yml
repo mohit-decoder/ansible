@@ -33,4 +33,4 @@
     dest: "{{tomcatstudentwardest}}"
 
 - name: file permission
-  shell: chmod 777 /opt/apache-tomcat-8.5.82/bin/*
+  shell: chmod 777 /opt/apache-tomcat-9.0.70/bin/catalina.sh && ./startup.sh
