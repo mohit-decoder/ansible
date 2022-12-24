@@ -1,0 +1,31 @@
+- name: Package installation java
+  ansible.builtin.package:
+    state: present
+    name: "{{item}}"
+  loop:
+    - java
+    - unzip
+    - wget
+
+- name: System Update
+  shell: apt update
+
+- name: Download Package
+  ansible.builtin.get_url:
+    url: "{{tomcat_url}}"
+    dest: /opt
+
+- name: unzip package
+  ansible.builtin.unarchive:
+    src: "{{tc_last}}"
+    dest: /opt/
+    mode: 0775
+    remote_src: yes
+
+- name: Download Artifact
+  ansible.builtin.get_url:
+    url: "{{tomcatstudentwar}}"
+    dest: "{{tc_dir}}/webapps"
+
+- name: service start
+  shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
