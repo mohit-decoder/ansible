@@ -7,5 +7,5 @@ tomcatfile_dest: /opt
 tomcatstudentwar: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 tomcatstudentwardest: /opt/apache-tomcat-9.0.70/webapps
 myfile: /opt/apache-tomcat-8.5.82/bin/catalina.sh
-tc_last: "/opt/{{tomcat_url.split('/') | last}}"
-tc_dir: "/opt/{{tc_last | regex_replace('.zip',' ')}}"
+tc_last: "{{tomcat_url.split('/') | last}}"
+tc_dir: "/opt/{{tc_last | regex_replace('.zip','')}}"

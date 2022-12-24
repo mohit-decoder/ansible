@@ -17,7 +17,7 @@
 
 - name: unzip package
   ansible.builtin.unarchive:
-    src: "{{tc_last}}"
+    src: "/opt/{{tc_last}}"
     dest: /opt/
     mode: 0775
     remote_src: yes
