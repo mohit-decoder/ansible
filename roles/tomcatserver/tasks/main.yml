@@ -8,7 +8,7 @@
     - wget
 
 - name: System Update
-  shell: apt update
+  shell: yum update
 
 - name: Download Package
   ansible.builtin.get_url:
